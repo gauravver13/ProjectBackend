@@ -1,12 +1,19 @@
-import mongoose from "mongoose";
-import { DB_NAME } from "./constants";
+// require('dotenv').config({path: './env'})   
+//  --- breaks the consistency of the code, similar versions are available to import dotenv
+
+import dotenv from "dotenv"
+import connectDB from "./db/index.js";
 
 
 
 
+dotenv.config({
+    path: './env'
+})
 
 
 
+connectDB()
 
 
 
@@ -23,6 +30,7 @@ import { DB_NAME } from "./constants";
 /*
 
                         Database Connectivity!
+    Better Methods to connect DataBase through DB files
 
 import express from "express"
 const app = express()
