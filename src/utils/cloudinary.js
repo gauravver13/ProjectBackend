@@ -31,4 +31,4 @@ const uploadCloudinary = async (localFilePath) => {
 //   function(error, result) {console.log(result); });
 
 
-  export {uploadCloudinary}
+  export {uploadCloudinary} 
