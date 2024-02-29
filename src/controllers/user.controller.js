@@ -23,6 +23,7 @@ const generateAccessAndRefreshTokens = async(userId) => {
 }
 
 
+
 const registerUser = asyncHandler ( async (req, res) => {
     // (Algorithms):
     // get user details from frontend 
