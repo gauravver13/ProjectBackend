@@ -8,7 +8,7 @@ const videoSchema = new Schema(
             required: true
         },
         thumbnail: {
-            type: String,  //cloundinary url
+            type: String,  
             required: true
         },
         title: {
@@ -20,15 +20,15 @@ const videoSchema = new Schema(
             required: true
         },
         duration: {
-            type: Number,  //cloundinary url
+            type: Number,  
             required: true
         },
         views: {
-            type: Number,  //cloundinary url
+            type: Number,  
             default: 0
         },
         isPublished: {
-            type: Number,  //cloundinary url
+            type: Number,  
             default: true
         },
         owner: {

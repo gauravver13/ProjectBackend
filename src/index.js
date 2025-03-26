@@ -9,6 +9,8 @@ dotenv.config({
     path: './.env'
 })
 
+console.log(process.env.PORT);
+
 
 // Database connections:
 connectDB()

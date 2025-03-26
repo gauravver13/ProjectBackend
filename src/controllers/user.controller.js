@@ -4,12 +4,11 @@ import { User } from "../models/user.model.js";
 import { uploadCloudinary } from '../utils/cloudinary.js'
 import { ApiResponse } from "../utils/ApiResponse.js"; 
 import jwt from "jsonwebtoken"
-import mongoose from "mongoose";
 
 const generateAccessAndRefreshTokens = async(userId) => {
     try {
         const user = await User.findById(userId)
-        const accessToken = user.generateAccessToken ()
+        const accessToken = user.generateAccessToken()
         const refreshToken = user.generateRefreshToken()
 
         user.refreshToken = refreshToken
@@ -21,8 +20,6 @@ const generateAccessAndRefreshTokens = async(userId) => {
         throw new ApiError(500, "Something went wrong while generating refresh and access token")
     }
 }
-
-
 
 const registerUser = asyncHandler ( async (req, res) => {
     // (Algorithms):
@@ -107,7 +104,7 @@ const registerUser = asyncHandler ( async (req, res) => {
     )
 })
 
-const longinUser = asyncHandler(async (req, res) => {
+const loginUser = asyncHandler(async (req, res) => {
     // username, password
     // refresh token : access token
     // !refresh_token : createUser
@@ -360,7 +357,7 @@ const updateUserCoverImage = asyncHandler(async(req, res) => {
 
 export {
     registerUser,
-    longinUser,
+    loginUser,
     logoutUser,
     refreshAccessToken,
     changeCurrentPassword,
